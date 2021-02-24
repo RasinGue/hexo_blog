@@ -52,7 +52,7 @@ tags: Gamemaker Studio
 
 贴图只是纯粹的图片，不能执行游戏中的指令和效果，因此就需要创建对象并绑定贴图。首先，我们先创建一个玩家对象 `oPlayer`，并将刚才创建好的 `sPlayer` 进行绑定。
 
-![](https://raw.githubusercontent.com/rasin-tsukuba/blog-images/master/img/20210223214535.png)
+![oPlayer](https://raw.githubusercontent.com/rasin-tsukuba/blog-images/master/img/20210223214535.png)
 
 下方的 `Events` 可以用来管理对象相关的所有事件。点击并创建新的事件。首先，`Create` 事件对应在对象创建时，我们需要初始化一些简单的变量：
 
@@ -72,4 +72,54 @@ key_right = keyboard_check(vk_right)|| keyboard_check(ord("D")); //方向键右�
 key_jump = keyboard_check_pressed(vk_space)|| keyboard_check_pressed(ord("W")); //空格键或键W，仅需点击即可
 ```
 
+这样就定义好了基本的行动按键。接下来，对应的按键要加上其逻辑才能有实际意义。我们继续定义一下运动的状态：
 
+```
+var move = key_right - key_left // `var` 用于声明局部变量
+hsp = move * walksp // 水平速度等于行动方向乘行走速度
+vsp = vsp + grv;  // 垂直速度等于现有垂直速度加上重力速度
+```
+
+首先定义了一个临时变量 `move`。`move` 在这里是一个布尔值，当 `key_right`为 `True` 且 `key_left` 为 `False` 时，`move`值为 `1` ；当 `key_right`为 `False` 且 `key_left` 为 `True` 时，`move` 值为 `-1` 。这样就可以将作为一个方向的标识。
+
+正如我们在 `Create` 事件中定义的几个基础的速度变量，在 `Step` 事件中需要对行进速度进行实时更改。对于水平速度如此定义无可厚非，但垂直速度并没有按照物理学的实际情况算上加速度，只是简单的通过在每个时间片减去重力的速度达到下落的效果。
+
+## 碰撞检测
+
+如果不做碰撞检测，那么人物在水平行进和下落的时候就不会被墙阻挡住，就没有办法进行游戏。因此要对人物和墙体之间做碰撞检测。先从跳跃开始：
+
+```
+// Jump
+if (place_meeting(x, y+1, oWall)) && (key_jump){
+    vsp = -7
+}
+```
+
+`place_meeting` 函数用于检查某个对象实例的 `Collision Mask` 与另一个实例或对象的所有实例的碰撞检测。因此这个函数可以检测玩家对象和所有的墙体，而不需要对单个墙体进行设定。由于房间坐标的左上顶点是 `(0, 0)`，因此垂直的负方向是向上，因此向上跳跃的速度设为负值。触发跳跃的条件是当玩家位于墙对象上分且按下跳跃。
+
+水平移动要算上玩家的移动速度。因此在 `place_meeting` 函数中需要注意：
+
+```
+if (place_meeting(x+hsp, y, oWall)){ //加上玩家的速度 也就是下一个时间片原本的位移
+    while (!place_meeting(x+sign(hsp), y, oWall)){ //当还没碰到墙时要继续移动，这里用方向表示更简洁
+        x = x + sign(hsp) //继续移动到墙边
+    }
+    hsp = 0 //将移动速度设为0
+}
+
+x = x + hsp; //更改玩家横坐标位置
+```
+
+同理，垂直移动也可以用类似的代码来实现：
+
+```
+//Vertical Collision
+if (place_meeting(x, y+vsp, oWall)){
+	
+	while (!place_meeting(x, y+sign(vsp), oWall)){
+		y = y + sign(vsp);
+	}
+	vsp = 0;
+}
+y = y + vsp;
+```
