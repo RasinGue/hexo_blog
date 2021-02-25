@@ -157,3 +157,15 @@ if (hsp !=0){ //在水平运动的时候
     image_xscale = sign(hsp) //运动方向的正负决定动画方向
 }
 ```
+
+## 房间设置
+
+做好了基本的对象和相关事件，我们应该将其放到实际的游戏中进行测试。在 `Rooms` 文件夹中创建一个新房间 `Room1`。界面的左上方有一个房间图层，如同 `Photoshop` 一样，居于最上的最前，居于最下的最后。除了原有的 `Background`，我们创建两个新的图层 `Player`和 `Wall`。
+
+![Layers](https://raw.githubusercontent.com/rasin-tsukuba/blog-images/master/img/20210225195516.png)
+
+之后我们将玩家对象和墙体对象拖入，按住 `alt` 键可以批量生成。如下图就是一个房间的示例：
+
+![Room1](https://raw.githubusercontent.com/rasin-tsukuba/blog-images/master/img/20210225200123.png)
+
+如果没有什么问题的话，点击上方的 `Run` 按钮或快捷键 `F5`就可以运行游戏了。
