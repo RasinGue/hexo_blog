@@ -123,3 +123,37 @@ if (place_meeting(x, y+vsp, oWall)){
 }
 y = y + vsp;
 ```
+
+## 动画效果
+
+在移动的基础上增加动画能使得游戏演示看起来更自然生动。这里重新创建两个贴图：`sPlayerR` 为奔跑动画，`sPlayerA` 为在空中的动画。我们需要玩家在跑动的时候播放奔跑动画，在跳跃的时候播放空中的动画。现在依旧需要用碰撞来检测玩家的具体位置：
+
+```
+if (!place_meeting(x, y+1, oWall)){ //不和墙体接触，即在空中时
+    sprite_index = sPlayerA //将动画切换成空中动画
+    image_speed = 0 // 将动画循环速度常数设为0，即整个动作只播放一次
+    if (sign(vsp) > 0){ //若玩家处于下落状态时
+        image_index = 1; //仅播放第二帧
+    }
+    else{
+        image_index = 0; //播放第一帧
+    }
+}
+else{ //在地面的情况
+    image_speed = 1; //常速播放动画
+    if (hsp == 0){
+        sprite_index = sPlayer //播放静止动画
+    }
+    else{
+        sprite_index = sPlayerR //播放运动动画
+    }
+}
+```
+
+跑动也有正反方向。Gamemaker Studio 提供了一个取巧的功能使得美术不需要画两个方向的动画：
+
+```
+if (hsp !=0){ //在水平运动的时候
+    image_xscale = sign(hsp) //运动方向的正负决定动画方向
+}
+```
