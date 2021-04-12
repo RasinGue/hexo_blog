@@ -1,7 +1,7 @@
 ---
 title: GVGAI Book Chapter 2 - VGDL and the GVGAI Framework -- Exercises
 date: 2021-04-10 19:35:55
-tags: GVGAI, VGDL
+tags: GVGAI; VGDL
 ---
 
 [书籍网站](https://gaigresearch.github.io/gvgaibook/)
@@ -98,5 +98,4 @@ int gameIdx = 9;
 * 一旦编译运行完成，你可以在排行版上看到您的结果。
 * 如果您想参赛，可以先用示例代码提交测试。
 
-# VGDL 范例解读
 
