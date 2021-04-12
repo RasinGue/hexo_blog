@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>标签: VGDL - Rasin&#039;s Blog</title><meta property="og:type" content="blog"><meta property="og:title" content="Rasin&#039;s Blog"><meta property="og:url" content="https://rasin.me/"><meta property="og:site_name" content="Scienage Mafelteens"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://rasin.me/img/og_image.png"><meta property="article:author" content="Rasin Gue"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://rasin.me"},"headline":"Rasin's Blog","image":["https://rasin.me/img/og_image.png"],"author":{"@type":"Person","name":"Rasin Gue"},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=UA-166789681-2" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-166789681-2');</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Rasin&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">标签</a></li><li class="is-active"><a href="#" aria-current="page">VGDL</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2021-04-11T19:35:55.000Z" title="2021-04-11T19:35:55.000Z">2021-04-11</time><span class="level-item">15 分钟 读完 (大约 2243 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/04/11/VGDL%E8%8C%83%E4%BE%8B%E8%A7%A3%E8%AF%BB/">VGDL范例解读</a></h1><div class="content"><p><a href="http://schaul.site44.com/publications/pyvgdl.pdf">A Video Game Description Language for Model-based or Interactive Learning</a></p>
+<h2 id="Alians-VGDL"><a href="#Alians-VGDL" class="headerlink" title="Alians VGDL"></a><a href="https://github.com/GAIGResearch/GVGAI/blob/master/examples/gridphysics/aliens.txt">Alians VGDL</a></h2><h1 id="VGDL论文"><a href="#VGDL论文" class="headerlink" title="VGDL论文"></a>VGDL论文</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><code>pyVGDL</code> 是一种视频游戏描述语言，以促进大型或多样化游戏组合的生成，这些游戏组合也可以用于评估具有通用性的体系结构和算法，例如强化学习和进化搜索。为了使这一目的更加可行，作者将游戏生成领域限制为2D街机风格游戏，其具有足够多样化的空间。</p>
+<p><code>pyVGDL</code>应该具有<strong>清晰</strong>，<strong>易读</strong>且<strong>明确</strong>的特性。其词汇应具有较高的<strong>表达力</strong>，比你更具有相当新颖的<strong>扩展性</strong>。其表示结构应该<strong>易于解析</strong>，可以<strong>自动生成游戏</strong>，默认设置和健全检查能够使大多数随机游戏描述<strong>真正可玩</strong>。</p>
+<h2 id="pyVGDL-语言"><a href="#pyVGDL-语言" class="headerlink" title="pyVGDL 语言"></a>pyVGDL 语言</h2><p>基于Python语言和 <code>pygame</code>库开发。完整<a href="https://github.com/schaul/py-vgdl">开源代码地址</a>。</p>
+<p>整个游戏将限制在一个二维矩形空间内，所有游戏相关的<em>对象</em>都再此空间内。受全局或特定于对象的规则和玩家动作的影响，对象可以<em>移动</em>，与其他对象<em>交互</em>，<em>消失</em>或<em>生成新对象</em>。 </p>
+<p>一个游戏分为两个部分：<em>关卡描述</em>描述了所有对象的位置和游戏2D布局； <em>游戏描述</em>描述了游戏中所有动态和潜在的对象互动。</p>
+<p>一个关卡描述的示例：具有固定的长，，用不同的符号代表不同的对象。例如：<code>A</code>代表在左上角生成的玩家，需要找到钥匙 <code>+</code>到目的地 <code>G</code>离开迷宫。通过避开或击杀怪物 <code>1</code>来完成关卡。其余的 <code>w</code>代表迷宫的墙体。</p>
+<p><img src="https://raw.githubusercontent.com/rasin-tsukuba/blog-images/master/img/20210411102437.png" alt="Figure 1"></p>
+<p>而游戏描述则由四大块指令组成。以下使塞尔达传说的一个示例：</p>
+<p><img src="https://raw.githubusercontent.com/rasin-tsukuba/blog-images/master/img/20210411103457.png" alt="Figure 2"></p>
+<ul>
+<li><code>LevelMapping</code> 定义了如何将对应字符从关卡描述映射到对象。例如 <code>1</code> 可以映射到 <code>monster</code> 类。</li>
+<li><code>SpriteSet</code> 定义了对象类，都是由一个抽象类 <code>VGDLSprite</code> 派生出来的。对象类以树的形式 （使用缩进）来组织，子类将会继承其父类的属性。例如玩家的 <code>avatar</code> 类中就有两个子类，其中一个是得到钥匙的，另一个没有。所有的类都可以使用关键字参数，例如 <code>key</code> 和 <code>goal</code> 就是用了不同的 <code>color</code>参数，都具有相同的 <code>Immovable</code> 参数。</li>
+<li><code>InteractionSet</code> 定义了当两个对象碰撞时将会发生的潜在事件。这些互动由事件方法定义，也可以使用参数。例如，<code>sword</code> 可以击杀 <code>monster</code>， <code>monster</code> 可以击杀玩家，没有对象可以穿透 <code>walls</code>，当林克找到 <code>key</code> 对象时，<code>avatar</code> 类将会转换。</li>
+<li><code>TerminationSet</code> 定义了游戏结束的不同方法，每一行都是一个结束评判。例如，是否到达 <code>goal</code>。</li>
+</ul>
+<p>还有一些其他的设置例如：</p>
+<ul>
+<li>物理类型 ：<em>continuous</em>, <em>grid based</em>, <em>friction</em>, <em>gravity</em>, …</li>
+<li>移动动态：<em>straight</em>, <em>random motion</em>, <em>player-control</em>, …</li>
+<li>互动作用：<em>bouncing</em>, <em>destruction</em>, <em>spawning</em>, <em>transforming</em>, …</li>
+</ul>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
+<li>生成，克隆和消除对象，从一种类型转换到另一种</li>
+<li>自走式对象运动，采取一致或随机的动作，或者不规律变化</li>
+<li>非确定性的追赶和逃避行为</li>
+<li>根据用户操作或碰撞效果触发的固定或随机时间表在任意对象位置生成的发射对象</li>
+<li>粘性，即一个物体拉动另一个物体</li>
+<li>其他对象或屏幕边缘的跳动和环绕行为</li>
+<li>将物体传送到固定或随机的终端位置</li>
+<li>连续的物理效应，例如惯性，摩擦和重力</li>
+<li>随机影响，例如沿当前方向滑动或阵风</li>
+</ul>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p><code>pyVGDL</code> 是基于 Python语言本身。游戏描述必须严格保持一个树形结构，更类似于XML 样式。</p>
+<p><img src="https://raw.githubusercontent.com/rasin-tsukuba/blog-images/master/img/20210411181047.png" alt="Figure 4"></p>
+<p>整个解析器包含了游戏描述和关卡描述的解析。解析和初始化在一秒之内完成，基本可以使游戏马上可玩。</p>
+<h2 id="解释器和接口"><a href="#解释器和接口" class="headerlink" title="解释器和接口"></a>解释器和接口</h2><ul>
+<li>玩家类型：支持玩家直接用键盘参与，以及机器人调用接口。接口符合 <code>PyBrain</code>机器学习库的 <code>Agent/Environement/Task</code>模型，通过 <code>getSensors</code>和<code>performAction</code>方法来进行互动。</li>
+<li>玩家数量：支持单人（目前已支持多人）</li>
+<li>视角：默认游戏以鸟瞰视角游玩，而且全地图可见。我们也提供了第一人称视角，这样游戏将只有部分可见。</li>
+<li>观察：它们可以以中等分辨率的图像或“干净”的形式在视觉上呈现，仅表示功能不同的组件。然而，强大的agent能够像人类一样识别视觉流。</li>
+<li>模型：我们提供了一种转换工具，可以将游戏动态转换为马尔可夫决策过程的完整转换矩阵 。这仅对状态组合不会爆炸增加的游戏是可行的。 </li>
+</ul>
+<h1 id="VGDL-范例"><a href="#VGDL-范例" class="headerlink" title="VGDL 范例"></a>VGDL 范例</h1><h2 id="Lunar-Lander"><a href="#Lunar-Lander" class="headerlink" title="Lunar Lander"></a>Lunar Lander</h2><p>Lunar Lander的游戏描述文件为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">BasicGame</span><br><span class="line">    LevelMapping</span><br><span class="line">        G &gt; pad</span><br><span class="line">    SpriteSet</span><br><span class="line">        pad &gt; Passive color&#x3D;BLUE</span><br><span class="line">        avatar &gt; InertialAvatar physicstype&#x3D;GravityPhysics</span><br><span class="line">    InteractionSet</span><br><span class="line">        avatar wall &gt; killSprite</span><br><span class="line">        avatar EOS &gt; killSprite</span><br><span class="line">        pad avatar &gt; killIfSlow</span><br><span class="line">    TerminationSet</span><br><span class="line">        SpriteCounter stype&#x3D;pad limit&#x3D;4 win&#x3D;True</span><br><span class="line">        SpriteCounter stype&#x3D;avatar win&#x3D;False</span><br></pre></td></tr></table></figure>
+
+<p>其中之一的关卡描述文件为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">wwwwwwwwwwwwwwwwwwwwwwwwwwww</span><br><span class="line">         w    w            w</span><br><span class="line">     A    wwww              </span><br><span class="line">                            </span><br><span class="line">                            </span><br><span class="line">                            </span><br><span class="line">                      www   </span><br><span class="line">                     wwww  w</span><br><span class="line">        w        wwwwwwwwGGw</span><br><span class="line">       wwwwwGGGwwwwwwwwwwwww</span><br><span class="line">     wwwwwwwwwwwwwwwwwwwwwww</span><br><span class="line">wwwwwwwwwwwwwwwwwwwwwwwwwwww</span><br></pre></td></tr></table></figure>
+
+<p>从关卡描述中我们可以看出，<code>A</code>为玩家，<code>G</code>为降落地点，<code>w</code> 为墙体。</p>
+<ul>
+<li>LevelMapping: <code>G</code>为降落地点</li>
+<li>SpriteSet: <code>pad</code> 被设为蓝色，玩家<code>avatar</code>的物理类型是受到重力影响的。</li>
+<li>InteractionSet：<ul>
+<li><code>avatar</code> 碰到墙体即被摧毁</li>
+<li><code>avatar</code> 飞出游戏窗体外也被摧毁</li>
+<li><code>avatar</code> 碰到 <code>pad</code> 如果速度过快也被摧毁</li>
+</ul>
+</li>
+<li>TerminationSet: 由于总共落地点有五个，到达目的地会自动消除一个，因此剩下四格降落点时玩家胜利，否则失败。</li>
+</ul>
+<h2 id="Aliens"><a href="#Aliens" class="headerlink" title="Aliens"></a>Aliens</h2><p>游戏描述文件为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">BasicGame square_size&#x3D;32</span><br><span class="line">    SpriteSet</span><br><span class="line">        background &gt; Immovable img&#x3D;oryx&#x2F;space1 hidden&#x3D;True</span><br><span class="line">        base    &gt; Immovable    color&#x3D;WHITE img&#x3D;oryx&#x2F;planet</span><br><span class="line">        avatar  &gt; FlakAvatar   stype&#x3D;sam img&#x3D;oryx&#x2F;spaceship1</span><br><span class="line">        missile &gt; Missile</span><br><span class="line">            sam  &gt; orientation&#x3D;UP    color&#x3D;BLUE singleton&#x3D;True img&#x3D;oryx&#x2F;bullet1</span><br><span class="line">            bomb &gt; orientation&#x3D;DOWN  color&#x3D;RED  speed&#x3D;0.5 img&#x3D;oryx&#x2F;bullet2</span><br><span class="line">        alien   &gt; Bomber       stype&#x3D;bomb   prob&#x3D;0.01  cooldown&#x3D;3 speed&#x3D;0.8</span><br><span class="line">            alienGreen &gt; img&#x3D;oryx&#x2F;alien3</span><br><span class="line">            alienBlue &gt; img&#x3D;oryx&#x2F;alien1</span><br><span class="line">        portal  &gt; invisible&#x3D;True hidden&#x3D;True</span><br><span class="line">        	portalSlow  &gt; SpawnPoint   stype&#x3D;alienBlue  cooldown&#x3D;16   total&#x3D;20 img&#x3D;portal</span><br><span class="line">        	portalFast  &gt; SpawnPoint   stype&#x3D;alienGreen  cooldown&#x3D;12   total&#x3D;20 img&#x3D;portal</span><br><span class="line"></span><br><span class="line">    LevelMapping</span><br><span class="line">        . &gt; background</span><br><span class="line">        0 &gt; background base</span><br><span class="line">        1 &gt; background portalSlow</span><br><span class="line">        2 &gt; background portalFast</span><br><span class="line">        A &gt; background avatar</span><br><span class="line"></span><br><span class="line">    TerminationSet</span><br><span class="line">        SpriteCounter      stype&#x3D;avatar               limit&#x3D;0 win&#x3D;False</span><br><span class="line">        MultiSpriteCounter stype1&#x3D;portal stype2&#x3D;alien limit&#x3D;0 win&#x3D;True</span><br><span class="line"></span><br><span class="line">    InteractionSet</span><br><span class="line">        avatar  EOS  &gt; stepBack</span><br><span class="line">        alien   EOS  &gt; turnAround</span><br><span class="line">        missile EOS  &gt; killSprite</span><br><span class="line"></span><br><span class="line">        base bomb &gt; killBoth</span><br><span class="line">        base sam &gt; killBoth scoreChange&#x3D;1</span><br><span class="line"></span><br><span class="line">        base   alien &gt; killSprite</span><br><span class="line">        avatar alien &gt; killSprite scoreChange&#x3D;-1</span><br><span class="line">        avatar bomb  &gt; killSprite scoreChange&#x3D;-1</span><br><span class="line">        alien  sam   &gt; killSprite scoreChange&#x3D;2</span><br></pre></td></tr></table></figure>
+
+<p>其一关卡描述文件为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1.............................</span><br><span class="line">000...........................</span><br><span class="line">000...........................</span><br><span class="line">..............................</span><br><span class="line">..............................</span><br><span class="line">..............................</span><br><span class="line">..............................</span><br><span class="line">....000......000000.....000...</span><br><span class="line">...00000....00000000...00000..</span><br><span class="line">...0...0....00....00...00000..</span><br><span class="line">................A.............</span><br></pre></td></tr></table></figure>
+
+<p>从描述文件我们可以看出：</p>
+<ul>
+<li>LevelMapping: <ul>
+<li><code>.</code> 为背景</li>
+<li><code>0</code>为墙体（基地）</li>
+<li><code>1</code> 为敌人产出生点</li>
+<li><code>2</code>产生速度较快</li>
+<li><code>A</code> 为玩家</li>
+</ul>
+</li>
+<li>SpriteSet:<ul>
+<li>背景不可移动，贴图位置为 <code>oryx/space1</code>，表现为隐藏不可互动</li>
+<li>基地不可以调动，颜色为白色，贴图位置 <code>oryx/planet</code></li>
+<li>玩家属于 <code>FlakAvatar</code>类，子弹类型为 <code>sam</code>，贴图位置 <code>oryx/spaceship1</code></li>
+<li>导弹属于 <code>Missile</code> 类，分为两种：<ul>
+<li><code>sam</code> 是向上射击的，颜色为蓝色，全屏只能存在一个，贴图位置 <code>oryx/bullet1</code></li>
+<li><code>bomb</code> 是向下掉落的，颜色为红色，速度限制为 <code>0.5</code>，贴图位置 <code>oryx/bullet2</code></li>
+</ul>
+</li>
+<li>敌人也有两种，属于<code>Bomber</code>类，子弹卫星为 <code>bomb</code>， 射击概率为 <code>0.01</code>，冷却时间为 <code>3</code>，速度为 <code>0.8</code><ul>
+<li>绿色敌人贴图 <code>oryx/alien3</code></li>
+<li>蓝色敌人贴图 <code>oryx/alien1</code></li>
+</ul>
+</li>
+<li>传送点不可见，也不可互动<ul>
+<li>慢速传送点产生蓝色敌人，冷却时间为 <code>16</code>，总计产生20个</li>
+<li>快速传送点产生绿色敌人，冷却时间为 <code>12</code>，总计产生20个</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>InteractionSet<ul>
+<li>玩家飞出屏幕将会退格，即卡住不会前进</li>
+<li>机器人飞出屏幕则会反向继续前进</li>
+<li>子弹飞出屏幕则直接销毁</li>
+<li>如果基地碰到bomb则两个都被销毁</li>
+<li>如果基地碰到sam则两个都被销毁，加一分</li>
+<li>如果基地碰到敌人，基地被销毁</li>
+<li>如果玩家碰到敌人，玩家被摧毁，扣一分</li>
+<li>如果玩家碰到bomb，玩家被摧毁，扣一分</li>
+<li>如果敌人碰到sam，敌人被摧毁，得两分</li>
+</ul>
+</li>
+<li>TerminationSet<ul>
+<li>如果玩家数量为0，即玩家被摧毁，游戏失败</li>
+<li>如果传送门和敌人的数量都为0，则游戏胜利</li>
+</ul>
+</li>
+</ul>
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="" src="/img/avatar.png" alt="Rasin Gue"></figure><p class="title is-size-4 is-block line-height-inherit">Rasin Gue</p><p class="is-size-6 is-block">PhD in Progress</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Tsukuba, Japan</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">4</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/RasinGue" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/RasinGue"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/mizumori_setsu"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com/rasin"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2021-04-11T19:35:55.000Z">2021-04-11</time></p><p class="title is-6"><a class="link-muted" href="/2021/04/11/VGDL%E8%8C%83%E4%BE%8B%E8%A7%A3%E8%AF%BB/">VGDL范例解读</a></p><p class="is-uppercase"></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2021-04-10T19:35:55.000Z">2021-04-10</time></p><p class="title is-6"><a class="link-muted" href="/2021/04/10/GVGAI%20Book%20Chapter%202%20-%20VGDL%20and%20the%20GVGAI%20Framework%20--%20Exercises/">GVGAI Book Chapter 2 - VGDL and the GVGAI Framework -- Exercises</a></p><p class="is-uppercase"></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2021-03-23T19:35:55.000Z">2021-03-23</time></p><p class="title is-6"><a class="link-muted" href="/2021/03/23/%E9%87%8D%E8%BF%94Gamemaker%20Studio2/">重返Gamemaker Studio 入门篇2</a></p><p class="is-uppercase"></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2021-02-23T19:35:55.000Z">2021-02-23</time></p><p class="title is-6"><a class="link-muted" href="/2021/02/23/%E9%87%8D%E8%BF%94Gamemaker%20Studio1/">重返Gamemaker Studio 入门篇1</a></p><p class="is-uppercase"></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-06-12T15:31:55.000Z">2020-06-12</time></p><p class="title is-6"><a class="link-muted" href="/2020/06/12/%E7%8B%AC%E4%B8%8E%E5%AD%A4/">独与孤</a></p><p class="is-uppercase"></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/03/"><span class="level-start"><span class="level-item">三月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/02/"><span class="level-start"><span class="level-item">二月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/06/"><span class="level-start"><span class="level-item">六月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/GVGAI-VGDL/"><span class="tag">GVGAI; VGDL</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Gamemaker-Studio/"><span class="tag">Gamemaker Studio</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VGDL/"><span class="tag">VGDL</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/joural/"><span class="tag">joural</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button is-primary" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Rasin&#039;s Blog" height="28"></a><p class="size-small"><span>&copy; 2021 Rasin Gue</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'https://rasin.me',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
