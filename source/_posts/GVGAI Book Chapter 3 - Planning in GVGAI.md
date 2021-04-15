@@ -270,7 +270,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='MCTS research code')
     # 模拟预算参数
     parser.add_argument('--num_sims', action="store", required=True, type=int)
-    # 搜索深度参数
+    # `levels` 是使用MCTS挑选最佳子节点的次数 
     parser.add_argument('--levels', action="store", required=True, type=int, choices=range(State.NUM_TURNS))
     args = parser.parse_args()
 
