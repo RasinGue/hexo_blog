@@ -20,12 +20,12 @@
 <h3 id="更改游戏"><a href="#更改游戏" class="headerlink" title="更改游戏"></a>更改游戏</h3><p>在代码中的<code>29</code>行我们可以看到游戏集文件 <code>examples/all_games_sp.csv</code>。使用CSV插件可以看到游戏列表：</p>
 <p><img src="https://raw.githubusercontent.com/rasin-tsukuba/blog-images/master/img/20210410201344.png" alt="all_games_sp"></p>
 <p>那么接下来在文件的 <code>37</code>行中，我们可以通过修改 <code>gameIdx</code> 来更改游戏。例如，将其修改为:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int gameIdx &#x3D; 9;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">int gameIdx &#x3D; 9;<br></code></pre></td></tr></table></figure>
 
 <p>再次编译运行，游戏就变成了炸弹人：</p>
 <p><img src="https://raw.githubusercontent.com/rasin-tsukuba/blog-images/master/img/20210410201650.png" alt="bomberman"></p>
 <h3 id="用机器人玩游戏"><a href="#用机器人玩游戏" class="headerlink" title="用机器人玩游戏"></a>用机器人玩游戏</h3><p>要使用示例Agent来运行集合中的游戏时，请注释掉第 <code>49</code>行（这行代码是给玩家试玩使用的），并解开第 <code>52</code> 行注释。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 1. This starts a game, in a level, played by a human.</span><br><span class="line">&#x2F;&#x2F;ArcadeMachine.playOneGame(game, level1, recordActionsFile, seed);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 2. This plays a game in a level by the controller.</span><br><span class="line">ArcadeMachine.runOneGame(game, level1, visuals, sampleRHEAController, recordActionsFile, seed, 0);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plain">&#x2F;&#x2F; 1. This starts a game, in a level, played by a human.<br>&#x2F;&#x2F;ArcadeMachine.playOneGame(game, level1, recordActionsFile, seed);<br><br>&#x2F;&#x2F; 2. This plays a game in a level by the controller.<br>ArcadeMachine.runOneGame(game, level1, visuals, sampleRHEAController, recordActionsFile, seed, 0);<br></code></pre></td></tr></table></figure>
 
 <p><code>runOneGame</code> 第四个函数指定Agent的位置（默认是 <code>Rolling Horizon Evolutionary Algorithm agent</code>）。</p>
 <p>文件中第 <code>18</code> 至 <code>26</code>行定义了本框架中包含的实例Agents，例如 <code>Monte Carlo Tree Search agent</code> 和 <code>OLETS</code>。</p>
